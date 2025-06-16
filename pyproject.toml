@@ -1,0 +1,17 @@
+[project]
+name = "projeto-website-flask-bootcamp"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Vinícius Pinto Gonçalves",email = "vinip8372@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask (>=3.1.1,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
