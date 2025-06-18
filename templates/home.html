@@ -22,7 +22,11 @@
         versions of Lorem Ipsum
     </p>
     <h2 class="text-center">Vagas Abertas</h2>
-    <p class="text-center">Aqui será retornado vagas sobre a linguagem Python</p>
+    <p>
+        {% for vaga in vagas %}
+            {% include 'includes/vagas_item.html' %}
+        {% endfor %}
+    </p>
     <div class="text-center" style="text-align: center;">
         <button class="btn btn-primary btn-lg">Entrar em Contato</button>
     </div>
