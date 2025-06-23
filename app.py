@@ -15,8 +15,10 @@ def lista_vagas():
 
 @app.route('/vaga/<id>')
 def mostra_vaga(id):
-        vagas1 = carrega_vaga_db(id)
-        return jsonify(vagas1)
+        vaga1 = carrega_vaga_db(id)
+        if not vaga1:
+            return "Not Found", 404
+        return render_template("detalhevaga.html", vaga=vaga1)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
