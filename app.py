@@ -1,5 +1,5 @@
-from flask import Flask, render_template, jsonify, request
-from database import carrega_vagas_db, carrega_vaga_db, adiciona_incricao
+from flask import Flask, render_template, jsonify
+from database import carrega_vagas_db, carrega_vaga_db
 
 app = Flask(__name__)
 
@@ -19,13 +19,6 @@ def mostra_vaga(id):
         if not vaga1:
             return "Not Found", 404
         return render_template("detalhevaga.html", vaga=vaga1)
-    
-@app.route('/vaga/<id>/inscricao', methods=["GET", "POST"])
-def incricao_vaga(id):
-    vaga1 = carrega_vaga_db(id)
-    data = request.form
-    adiciona_incricao(id, data)
-    return render_template("inscricao_concluida.html", vaga=vaga1, inscricao=data)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
