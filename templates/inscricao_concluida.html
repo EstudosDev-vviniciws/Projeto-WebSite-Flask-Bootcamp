@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incrição Concluída</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+</head>
+<body>
+    {% include 'includes/navbar.html' %}
+    <div class="container">
+        <h2 class="text-center">Incrição para a vaga {{vaga.titulo}} foi concluída com sucesso</h2>
+        <h4>Nome</h4>
+        <div>{{inscricao.nome}}</div>
+        <h4>E-mail</h4>
+        <div>{{inscricao.email}}</div>
+        <h4>LinkedIn</h4>
+        <div>{{inscricao.linkedin}}</div>
+        <h4>Experiência</h4>
+        <div>{{inscricao.experiencia}}</div>
+    </div>  
+    {% include 'includes/footer.html' %}
+</body>
+</html>
